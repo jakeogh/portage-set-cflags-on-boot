@@ -1,7 +1,4 @@
-#!/usr/bin/env bash
-echo '\n' '\x00'
-exit 1
-#!/bin/sh
+#!/bin/bash
 
 set -o nounset
 set -o errexit
