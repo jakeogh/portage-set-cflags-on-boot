@@ -12,6 +12,6 @@ echo -e "CFLAGS=\"${cflags} -O2 -pipe\"\nCXXFLAGS=\"\${CFLAGS}\"" >> "${target}"
 
 source_line="source ${target}"
 grep -E "^${source_line}$" /etc/portage/make.conf > /dev/null \
-    || { echo "${0}: INFO, the line: \`${source_line}\` was not found in /etc/portage/make.conf" \
+    || { echo "${0}: INFO, the line: \`${source_line}\` was not found in /etc/portage/make.conf. Automatically adding it." \
          && echo "${source_line}" \
          >> /etc/portage/make.conf ; }
